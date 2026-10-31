@@ -1,0 +1,13 @@
+{
+  "name": "Curio — Daily Brain-Game Circuit",
+  "short_name": "Curio",
+  "description": "A little play. A little progress.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#17182C",
+  "theme_color": "#17182C",
+  "icons": [
+    { "src": "curio-logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

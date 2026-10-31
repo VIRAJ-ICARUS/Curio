@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17182C"><meta name="description" content="A little play. A little progress. Your daily brain-game circuit.">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="curio-logo.png"><link rel="apple-touch-icon" href="curio-logo.png">
+  <title>Curio — Daily Quest</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar"><div class="brand-mark">C<span>✦</span></div><div class="brand-copy"><div class="brand">CURIO</div><div class="subtitle">YOUR DAILY QUEST</div></div><button class="icon-btn" id="installBtn" hidden aria-label="Install Curio">＋</button></header>
+  <main id="main" class="main" tabindex="-1"></main>
+  <nav class="tabbar" aria-label="Main navigation">
+    <button class="tab active" data-tab="today"><span class="tab-icon">▣</span><span>TODAY</span></button>
+    <button class="tab" data-tab="games"><span class="tab-icon">▦</span><span>GAMES</span></button>
+    <button class="tab" data-tab="settings"><span class="tab-icon">⚙</span><span>SETTINGS</span></button>
+  </nav>
+</div>
+<dialog id="gameDialog"><form id="gameForm" method="dialog"><div class="dialog-head"><div><div class="eyebrow">GAME LIBRARY</div><h2 id="dialogTitle">Add a game</h2></div><button type="button" class="icon-btn" id="closeDialog" aria-label="Close">×</button></div>
+<label>Game name<input id="gameName" required maxlength="70" placeholder="e.g. Worldle"></label>
+<label>Website URL<input id="gameUrl" required type="url" placeholder="https://" inputmode="url"></label>
+<label>Category<select id="gameCategory"><option>Language</option><option>Word game</option><option>Geography</option><option>Brain training</option><option>Logic</option><option>Other</option></select></label>
+<label class="switch-row"><span><strong>Include in daily circuit</strong><small>Count this game toward daily progress.</small></span><input id="gameCircuit" type="checkbox" checked></label>
+<div class="dialog-actions"><button type="button" id="deleteGame" class="btn danger" hidden>Remove</button><button type="button" id="cancelDialog" class="btn ghost">Cancel</button><button type="submit" class="btn primary">Save game</button></div>
+</form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body></html>
