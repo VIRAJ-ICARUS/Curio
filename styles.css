@@ -6,3 +6,20 @@
 
 /* Account and cloud sync */
 .account-card{margin-bottom:18px}.account-card label{display:block;color:var(--lavender);font-size:11px;margin:14px 0}.auth-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.auth-actions .btn{flex:1;min-width:110px}
+
+/* Achievement badge archive */
+.tabbar{grid-template-columns:repeat(5,1fr)}
+.achievement-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.achievement-card{display:flex;align-items:center;gap:14px;padding:14px;background:#20223A;border:2px solid var(--line);box-shadow:3px 3px 0 var(--shadow);min-width:0}
+.achievement-card.earned{border-color:var(--badge-color)}
+.achievement-card.locked{opacity:.68}
+.achievement-emblem{width:62px;height:62px;flex:0 0 62px;display:grid;place-items:center;position:relative;background:#17182C;border:2px solid var(--badge-color);box-shadow:inset 0 0 0 4px #292C48,3px 3px 0 #080A16;transform:rotate(45deg)}
+.achievement-glyph{transform:rotate(-45deg);font-size:25px;color:var(--badge-color);text-shadow:2px 2px #080A16}
+.achievement-copy{flex:1;min-width:0}
+.achievement-category{font:7px 'Press Start 2P';color:var(--badge-color);line-height:1.8}
+.achievement-name{font-size:12px;font-weight:700;line-height:1.6;margin-top:3px}
+.achievement-description{font-size:10px;color:var(--lavender);line-height:1.6;margin:3px 0 8px}
+.achievement-progress{height:7px;background:#111225;border:1px solid #687298}
+.achievement-progress-fill{height:100%;background:var(--badge-color)}
+.achievement-progress-label{font-size:9px;color:var(--lavender);text-align:right;margin-top:4px}
+@media(min-width:560px){.achievement-grid{grid-template-columns:1fr 1fr}.achievement-card{align-items:flex-start;gap:12px}.achievement-emblem{width:50px;height:50px;flex-basis:50px}.achievement-glyph{font-size:20px}}
